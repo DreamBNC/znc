@@ -1,15 +1,16 @@
 # WBNC's [![ZNC](http://wiki.znc.in/resources/assets/wiki.png)](http://znc.in)
 
-[![Upstream](https://github.com/znc/znc)
-[![Travis Build Status](https://img.shields.io/travis/znc/znc/master.svg?label=linux%2Fosx)](https://travis-ci.org/znc/znc)
-[![AppVeyor Build status](https://img.shields.io/appveyor/ci/DarthGandalf/znc/master.svg?label=windows)](https://ci.appveyor.com/project/DarthGandalf/znc/branch/master)
-[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1759)](https://www.bountysource.com/trackers/1759-znc?utm_source=1759&utm_medium=shield&utm_campaign=TRACKER_BADGE)
-[![Coverage Status](https://coveralls.io/repos/znc/znc/badge.svg?branch=master&service=github)](https://coveralls.io/github/znc/znc?branch=master)
-[![Coverity Scan Build Status](https://img.shields.io/coverity/scan/6778.svg)](https://scan.coverity.com/projects/znc-coverity)
+![Upstream](https://github.com/znc/znc)
+![Travis Build Status](https://img.shields.io/travis/znc/znc/master.svg?label=linux%2Fosx)](https://travis-ci.org/znc/znc)
+![AppVeyor Build status](https://img.shields.io/appveyor/ci/DarthGandalf/znc/master.svg?label=windows)](https://ci.appveyor.com/project/DarthGandalf/znc/branch/master)
+![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1759)](https://www.bountysource.com/trackers/1759-znc?utm_source=1759&utm_medium=shield&utm_campaign=TRACKER_BADGE)
+![Coverage Status](https://coveralls.io/repos/znc/znc/badge.svg?branch=master&service=github)](https://coveralls.io/github/znc/znc?branch=master)
+![Coverity Scan Build Status](https://img.shields.io/coverity/scan/6778.svg)](https://scan.coverity.com/projects/znc-coverity)
 
 
-[![WBNC](https://github.com/wbnc/znc)
-[![WBNC Travis Status](https://img.shields.io/travis/WBNC/znc/master.svg)
+![WBNC](https://github.com/wbnc/znc)
+![WBNC Travis Status](https://img.shields.io/travis/WBNC/znc/master.svg)
+![WBNC Coverity Scan](https://img.shields.io/coverity/scan/9076.svg)
 ## Table of contents
 
 - Minimal Requirements
