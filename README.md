@@ -89,7 +89,7 @@ produce the `configure` script.
 ```shell
 ./configure
 make
-make install
+[sudo] make install
 ```
 
 You can use `./configure --help` if you want to get a list of options, though
