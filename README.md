@@ -7,6 +7,9 @@
 [![Coverage Status](https://coveralls.io/repos/znc/znc/badge.svg?branch=master&service=github)](https://coveralls.io/github/znc/znc?branch=master)
 [![Coverity Scan Build Status](https://img.shields.io/coverity/scan/6778.svg)](https://scan.coverity.com/projects/znc-coverity)
 
+
+[![WBNC](https://github.com/wbnc/znc)
+[![WBNC Travis Status](https://img.shields.io/travis/WBNC/znc/master.svg)
 ## Table of contents
 
 - Minimal Requirements
