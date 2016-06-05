@@ -575,7 +575,7 @@ bool CWebSock::ForceLogin() {
         return true;
     }
 
-    GetSession()->AddError("You must login to view that page");
+    GetSession()->AddError("Error: You must be logged in to access this page.");
     Redirect("/");
     return false;
 }
@@ -643,7 +643,7 @@ CWebSock::EPageReqResult CWebSock::OnPageRequestInternal(const CString& sURI,
         DEBUG("Remote IP:   " << GetRemoteIP());
         SendCookie("SessionId", "WRONG_IP_FOR_SESSION");
         PrintErrorPage(403, "Access denied",
-                       "This session does not belong to your IP.");
+                       "Your IP isn't in this user's whitelist.");
         return PAGE_DONE;
     }
 
@@ -810,7 +810,7 @@ CWebSock::EPageReqResult CWebSock::OnPageRequestInternal(const CString& sURI,
             return PAGE_PRINT;
         } else if (pModule->WebRequiresAdmin() && !GetSession()->IsAdmin()) {
             PrintErrorPage(403, "Forbidden",
-                           "You need to be an admin to access this module");
+                           "Access Denied: Only admins can access this module.");
             return PAGE_DONE;
         } else if (pModule->GetType() != CModInfo::GlobalModule &&
                    pModule->GetUser() != GetSession()->GetUser()) {
@@ -832,7 +832,7 @@ CWebSock::EPageReqResult CWebSock::OnPageRequestInternal(const CString& sURI,
             if (bActive && SubPage->RequiresAdmin() &&
                 !GetSession()->IsAdmin()) {
                 PrintErrorPage(403, "Forbidden",
-                               "You need to be an admin to access this page");
+                               "Access Denied: You need to be a Admin to view this page.");
                 return PAGE_DONE;
             }
         }
@@ -874,7 +874,7 @@ CWebSock::EPageReqResult CWebSock::OnPageRequestInternal(const CString& sURI,
             if (!SentHeader()) {
                 PrintErrorPage(
                     404, "Not Implemented",
-                    "The requested module does not acknowledge web requests");
+                    "This module does not acknowledge web requests.");
             }
             return PAGE_DONE;
         }
