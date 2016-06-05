@@ -69,7 +69,7 @@ Installation from source code is performed using the CMake toolchain.
 ```shell
 cmake .
 make
-make install
+[sudo] make install
 ```
 
 You can use `cmake-gui` or `ccmake` for more interactiveness.
@@ -82,7 +82,7 @@ For troubleshooting, `cmake --system-information` will show you details.
 
 ### Installing with `./configure`
 
-Installation from source code is performed using the `automake` toolchain.
+A alternate method of installation from source code is performed using the `automake` toolchain.
 If you are building from git, you will need to run `./autogen.sh` first to
 produce the `configure` script.
 
