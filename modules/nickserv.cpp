@@ -28,7 +28,7 @@ class CNickServ : public CModule {
   public:
     void SetCommand(const CString& sLine) {
         SetNV("Password", sLine.Token(1, true));
-        PutModule("Succesfully set NickServ password");
+        PutModule("Successfully set NickServ password");
     }
 
     void ClearCommand(const CString& sLine) { DelNV("Password"); }
