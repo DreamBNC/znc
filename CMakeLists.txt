@@ -349,13 +349,12 @@ summary_line("Cyrus    " "${CYRUS_FOUND}")
 summary_line("Charset  " "${ICU_FOUND}")
 summary_line("Zlib     " "${ZLIB_FOUND}")
 summary_line("i18n     " "${HAVE_I18N}")
-summary_line("Thank you for choosing WZNC!")
 include(render_framed_multiline)
 render_framed_multiline("${summary_lines}")
 
 message("")
 message("Now you can run 'make' to compile WZNC")
-message("Be aware that this may not be stable.")
+message("")
 
 # TODO
 # ====
