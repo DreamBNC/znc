@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.1)
 project(ZNC VERSION 1.7.0)
-set(ZNC_VERSION 1.7.x)
+set(ZNC_VERSION 1.7.x-wbnc)
 set(append_git_version true)
 set(alpha_version "") # e.g. "-rc1"
 
@@ -60,7 +60,7 @@ set(CMAKE_THREAD_PREFER_PTHREAD true)
 set(THREADS_PREFER_PTHREAD_FLAG true)
 find_package(Threads REQUIRED)
 if(NOT CMAKE_USE_PTHREADS_INIT)
-	message(FATAL_ERROR "This compiler/OS doesn't seem to support pthreads.")
+	message(FATAL_ERROR "This compiler/OS doesn't seem to support pthreads. Make sure you have the right compiler/OS.")
 endif()
 
 include(TestLargeFiles)
@@ -115,7 +115,7 @@ if(WANT_CYRUS)
 		endif()
 	endif()
 	if(TRISTATE_CYRUS_REQUIRED AND NOT CYRUS_FOUND)
-		message(FATAL_ERROR "Can't find Cyrus SASL 2")
+		message(FATAL_ERROR "Can't find Cyrus SASL 2. This is required for SASL.")
 	endif()
 endif()
 
@@ -143,7 +143,7 @@ if(WANT_PERL AND NOT EXISTS
 		set(search_swig true)
 	else()
 		message(FATAL_ERROR "Pregenerated modperl files are not available. "
-			"SWIG is required. Alternatively, build ZNC from tarball.")
+			"SWIG is required when building from Git. Alternatively, build ZNC from tarball, and you won't encounter this error.")
 	endif()
 endif()
 if(WANT_PYTHON AND NOT EXISTS
@@ -152,7 +152,7 @@ if(WANT_PYTHON AND NOT EXISTS
 		set(search_swig true)
 	else()
 		message(FATAL_ERROR "Pregenerated modpython files are not available. "
-			"SWIG is required. Alternatively, build ZNC from tarball.")
+			"SWIG is required when building from Git. Alternatively, build ZNC from tarball, and you won't encounter this error.")
 	endif()
 endif()
 if(search_swig)
@@ -160,7 +160,7 @@ if(search_swig)
 	if(NOT SWIG_FOUND)
 		message(FATAL_ERROR
 			"Can't find SWIG, therefore Perl and Python aren't supported. "
-			"Alternatively, build ZNC from tarball.")
+			"Alternatively, build ZNC from tarball if you need Perl/Python.")
 	endif()
 endif()
 
@@ -349,13 +349,13 @@ summary_line("Cyrus    " "${CYRUS_FOUND}")
 summary_line("Charset  " "${ICU_FOUND}")
 summary_line("Zlib     " "${ZLIB_FOUND}")
 summary_line("i18n     " "${HAVE_I18N}")
-
+summary_line("Thank you for choosing WZNC!")
 include(render_framed_multiline)
 render_framed_multiline("${summary_lines}")
 
 message("")
-message("Now you can run 'make' to compile ZNC")
-message("")
+message("Now you can run 'make' to compile WZNC")
+message("Be aware that this may not be stable.")
 
 # TODO
 # ====
