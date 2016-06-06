@@ -136,5 +136,3 @@ except OSError:
     pass
 subprocess.check_call(['cmake', '-DCMAKE_BUILD_TYPE=' + args.build_type]
         + cm_args + extra_args)
-        
-        print('ZNC-git (WBNC version) successfully configured!')
