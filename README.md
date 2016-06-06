@@ -11,6 +11,9 @@
 [![WBNC](https://github.com/wbnc/znc)
 [![WBNC Travis Status](https://img.shields.io/travis/WBNC/znc/master.svg)](https://travis-ci.org/WBNC/znc)
 [![WBNC Coverity Scan](https://img.shields.io/coverity/scan/9076.svg)](https://scan.coverity.com/projects/wbnc-znc)
+
+
+For people wondering, we're not gonna make Windows versions. Sorry about your luck :P
 ## Table of contents
 
 - Minimal Requirements
