@@ -19,8 +19,8 @@ modlink=@MODLINK@
 srcdir=@abs_srcdir@
 INC_PATH=-I${srcdir}/
 
-Name: ZNC
+Name: WZNC
 Description: An advanced IRC proxy
 Version: ${version}
-URL: http://znc.in
+URL: http://wbnc.tk
 Cflags: ${CPPFLAGS} ${MODFLAGS} ${INC_PATH}
