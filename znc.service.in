@@ -1,5 +1,5 @@
 [Unit]
-Description=ZNC, an advanced IRC bouncer
+Description=WZNC, an advanced IRC bouncer
 After=network.target
 
 [Service]
