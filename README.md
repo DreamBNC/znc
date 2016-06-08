@@ -1,4 +1,4 @@
-# W[![ZNC](http://wiki.znc.in/resources/assets/wiki.png)](http://znc.in)
+# W[![ZNC](http://wiki.znc.in/resources/assets/wiki.png)](http://wbnc.tk)
 
 [![Upstream](https://github.com/znc/znc)
 [![Travis Build Status](https://img.shields.io/travis/znc/znc/master.svg?label=linux%2Fosx)](https://travis-ci.org/znc/znc)
@@ -18,12 +18,12 @@ For people wondering, we're not gonna make Windows versions. Sorry about your lu
 
 - Minimal Requirements
 - Optional Requirements
-- Installing ZNC
+- Installing WZNC
 - Setting up znc.conf
 - Special config options
-- Using ZNC
+- Using WZNC
 - File Locations
-- ZNC's config file
+- WZNC's config file
 - Writing own modules
 - Further infos
 
@@ -61,7 +61,7 @@ cyrusauth:
 Character Encodings:
 * To get proper character encoding and charsets install ICU (`libicu4-dev`)
 
-## Installing ZNC
+## Installing WZNC
 
 Currently there are 2 build systems in place: CMake and `./configure`.
 `./configure` will eventually be removed.
@@ -111,7 +111,7 @@ If you are using SSL you should do `znc --makepem`
 
 ## Special config options
 
-When you create your ZNC configuration file via --makeconf, you are asked
+When you create your WZNC configuration file via --makeconf, you are asked
 two questions which might not be easy to understand.
 
 > Number of lines to buffer per channel
