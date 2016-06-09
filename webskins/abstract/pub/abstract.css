@@ -1,18 +1,18 @@
 h3 {
-	background-color: #049712;
+	background-color: #06357A;
 }
 
 table thead td {
-	background-color: #007700;
+	background-color: #009999;
 }
 
 #banner {
-	background-image: url('forest-header.png');
+	background-image: url('abtract-header.png');
 }
 
 #menu .modtitle.active,
 #menu .topitem.active {
-	background-color: #049712;
+	background-color: #06357A
 	font-weight: bold;
 }
 
@@ -21,5 +21,5 @@ table thead td {
 }
 
 a {
-	color: #049712;
+	color: #990000;
 }
