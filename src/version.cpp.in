@@ -15,4 +15,4 @@
  */
 
 #include <znc/version.h>
-const char* ZNC_VERSION_EXTRA-wbnc = VERSION_EXTRA "@alpha_version@" "@git_info@";
+const char* ZNC_VERSION_EXTRA = VERSION_EXTRA "@alpha_version@" "@git_info@";
