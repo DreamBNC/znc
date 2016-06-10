@@ -1,8 +1,7 @@
 language: cpp
 env:
-    global:
-          # SECRET_KEY, used to push docs to github and to init coverity scans
-        - secure: "i2f2UVDnyHT/9z0U3XvgTj8eDERvnc1Wk7HpseEjb75JwGzqn/2R+RKHmoSrwK3hFgij2IMxZL19XtHFwMz9t5A/huAAKD74KMMI/QpeZEJ/sjT3CTLcE9HEVDdJOjc7dfLRxb2hZtgvx8clZIMrpeUdPhci8openff30KvXVbg="
+ global:
+ - secure: "1VeKMeaKpYir0n4sA513T84BXCcrzULDj3qhgmoJvSY6sOeQiECSonpHoiRZyjXU6AJ+XEAEbGbA5cUDBxNrQSU/f2Qqi4q4Pqg8Ax1OFRo7lahS/4830tpgnq4MO5kl7yRS/CWHaB6Q+fUeyc2KMt16tpXnEACfnKTFYQ9DHeczHBUqDaY5YK3McU1Eu1RUyCfrFbjJLssF/3ewcZzwuM1iKrC1cdvHi7bIekOXAUg9sGYIg8FFwvfEMROerW0BUVzSJD2n6yTfTJnE7TZtU7EC4viNGfhoWbkNyn/2jHLJRK3EC/zDxC92T1KfwmU0VRKvjj3cAIp4I47xByagZcfyppNn0Xa1POfa7gSw2Ofl8znxJlwIvZ4GIuI0ntZCR8ToJ50gpwNF5u8njHUiNLZeClJDJMsHUjoWHm3NcqqmMPXwAYYTFz0oqYZ6fcwDSJymF0xF87GT4Pzv8tRi9uIsczWzL9CxXagEVS9N8INPzbdsrrAxD5DXAkewnpG8hlNBySi7NAaXVwvaDdcayPqMnRa4TLjcJ/9OgEQBFRKcrDfX+PM1AmmJwTrAxVZGh785NgHcH+YUYG9xDsrfpEyEQYrgMxJlO38+o2aT6yFDlWCZMGPPb0lVCP435z7iZleG8bKsEPOqo28A6hOwIhxpugBy3v3MYeBhROuRoNw="
 matrix:
     fast_finish: true
     include:
@@ -114,3 +113,12 @@ after_success:
           fi
 sudo: required
 dist: trusty
+addons:
+ coverity_scan: 
+project: 
+name: "WBNC/znc" 
+description: "The most cutting edge ZNC fork." 
+notification_email: Travis@youneeda.pw 
+build_command_prepend: "mkdir build; cmake .." 
+build_command: "make -j2" 
+branch_pattern: coverity_scan
