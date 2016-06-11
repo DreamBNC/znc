@@ -330,7 +330,7 @@ class CPartylineMod : public CModule {
                     } else {
                         pUser->PutUser(":irc.znc.in 482 " + pClient->GetNick() +
                                        " " + sChannel +
-                                       " :You're not channel operator");
+                                       " :You're a not channel operator");
                     }
                 } else {
                     sTopic = pChannel->GetTopic();
@@ -576,7 +576,7 @@ class CPartylineMod : public CModule {
             } else {
                 pClient->PutClient(":" + GetIRCServer(pNetwork) + " 401 " +
                                    pClient->GetNick() + " " + sTarget +
-                                   " :No such znc user: " + sNick + "");
+                                   " :No such WBNC user: " + sNick + "");
             }
         }
 
