@@ -128,7 +128,7 @@ If this is disabled, you get the buffer playback only once and then it is
 deleted. If this is enabled, the buffer is not deleted. This may be useful
 if you regularly use more than one client to connect to ZNC.
 
-## Using ZNC
+## Using WZNC
 
 Once you have started ZNC you can connect with your favorite IRC-client to
 ZNC. You should use `username:password` as the server password (e.g.
@@ -161,7 +161,7 @@ These directories are also in there:
 - users   - This is per-user data and mainly contains just a moddata
   directory.
 
-## ZNC's config file
+## WZNC's config file
 
 This file shouldn't be too hard too understand. An explanation of all the
 items can be found on the
@@ -193,11 +193,16 @@ Perl modules are loaded through the global module
 Python modules are loaded through the global module
 [ModPython](http://wiki.znc.in/Modpython).
 
-## Further infos
+## Further Information
 
-Please visit http://znc.in/ or
-[#znc on freenode](ircs://irc.freenode.net:6697/#znc) if you still have
-questions.
+Please visit http://wbnc.tk/ or any one of out official channels below:
+``*Official Channels*
+#WBNC@irc.rizon.net
+#WBNC@irc.xerox.us.to
+#WBNC@irc.freenode.org
+#WBNC@irc.mindforge.org
+``
+
 
 You can get the latest development version with git:
-`git clone https://github.com/znc/znc.git --recursive`
+`git clone https://github.com/wbnc/znc.git --recursive`
