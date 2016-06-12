@@ -21,4 +21,5 @@ Code changes
 ============
 
 * Follow the exact same conventions and style of the file you change.
+* Make sure the code actually works before submitting a pull request
 
