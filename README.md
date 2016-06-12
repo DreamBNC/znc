@@ -197,10 +197,10 @@ Python modules are loaded through the global module
 
 Please visit http://wbnc.tk/ or any one of out official channels below:
 ``*Official Channels*
-#WBNC@irc.rizon.net
-#WBNC@irc.xerox.us.to
-#WBNC@irc.freenode.org
-#WBNC@irc.mindforge.org
+  [#WBNC@irc.rizon.net]
+  [#WBNC@irc.xerox.us.to]
+  [#WBNC@irc.freenode.org]
+  [#WBNC@irc.mindforge.org]
 ``
 
 
