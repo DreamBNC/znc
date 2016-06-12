@@ -643,4 +643,4 @@ void TModInfo<CAutoOpMod>(CModInfo& Info) {
     Info.SetWikiPage("autoop");
 }
 
-NETWORKMODULEDEFS(CAutoOpMod, "Auto op the good people")
+NETWORKMODULEDEFS(CAutoOpMod, "Automagically op's certain users")
