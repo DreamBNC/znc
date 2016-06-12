@@ -365,4 +365,4 @@ void TModInfo<CAutoVoiceMod>(CModInfo& Info) {
         "autovoice.");
 }
 
-NETWORKMODULEDEFS(CAutoVoiceMod, "Auto voice the good people")
+NETWORKMODULEDEFS(CAutoVoiceMod, "Automattically voice certain users")
