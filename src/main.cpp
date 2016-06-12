@@ -139,7 +139,7 @@ static void GenerateHelp(const char* appname) {
         "\t-p, --makepem      Generates a pemfile for use with SSL");
 #endif /* HAVE_LIBSSL */
     CUtils::PrintMessage(
-        "\t-d, --datadir      Set a different ZNC repository (default is "
+        "\t-d, --datadir      Set a different WZNC repository (default is "
         "~/.znc)");
 }
 
@@ -318,7 +318,7 @@ int main(int argc, char** argv) {
                 bMakePem = true;
                 break;
 #else
-                CUtils::PrintError("ZNC is compiled without SSL support.");
+                CUtils::PrintError("WZNC is compiled without SSL support.");
                 return 1;
 #endif /* HAVE_LIBSSL */
             case 'd':
@@ -364,7 +364,7 @@ int main(int argc, char** argv) {
         CString sSalt;
         CUtils::PrintMessage("Type your new password.");
         CString sHash = CUtils::GetSaltedHashPass(sSalt);
-        CUtils::PrintMessage("Kill ZNC process, if it's running.");
+        CUtils::PrintMessage("Kill WZNC process, if it's running.");
         CUtils::PrintMessage(
             "Then replace password in the <User> section of your config with "
             "this:");
@@ -376,7 +376,7 @@ int main(int argc, char** argv) {
         std::cout << "\tSalt = " << sSalt << std::endl;
         std::cout << "</Pass>" << std::endl;
         CUtils::PrintMessage(
-            "After that start ZNC again, and you should be able to login with "
+            "After that start WZNC again, and you should be able to login with "
             "the new password.");
 
         CZNC::DestroyInstance();
