@@ -591,13 +591,13 @@ CString& CUser::ExpandString(const CString& sStr, CString& sRet) const {
     sRet.Replace("%user%", GetUserName());
     sRet.Replace("%version%", CZNC::GetVersion());
     sRet.Replace("%vhost%", GetBindHost());
-    sRet.Replace("%znc%", CZNC::GetTag(false));
+    sRet.Replace("%znc%", "WBNC, free IRC bouncer service");
 
     // Allows for escaping ExpandString if necessary, or to prevent
     // defaults from kicking in if you don't want them.
     sRet.Replace("%empty%", "");
     // The following lines do not exist. You must be on DrUgS!
-    sRet.Replace("%irc%", "All your IRC are belong to ZNC");
+    sRet.Replace("%irc%", "All your IRC are belong to WBNC >:D");
     // Chosen by fair zocchihedron dice roll by SilverLeo
     sRet.Replace("%rand%", "42");
 
