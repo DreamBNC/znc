@@ -667,7 +667,7 @@ void CUser::UserConnected(CClient* pClient) {
     }
 
     pClient->PutClient(":irc.znc.in 001 " + pClient->GetNick() +
-                       " :- Welcome to ZNC -");
+                       " :- Welcome to WZNC -");
 
     m_vClients.push_back(pClient);
 }
@@ -1449,7 +1449,7 @@ CString CUser::GetRealName() const {
     // Not include version number via GetTag() because of
     // https://github.com/znc/znc/issues/818#issuecomment-70402820
     return (!m_sRealName.Trim_n().empty()) ? m_sRealName
-                                           : "ZNC - http://znc.in";
+                                           : "WBNC (WZNC) - http://wbnc.tk";
 }
 const CString& CUser::GetBindHost() const { return m_sBindHost; }
 const CString& CUser::GetDCCBindHost() const { return m_sDCCBindHost; }
