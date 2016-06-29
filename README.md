@@ -1,4 +1,4 @@
-# W[![ZNC](http://wiki.znc.in/resources/assets/wiki.png)](http://wbnc.tk)
+# Dream[![ZNC](http://wiki.znc.in/resources/assets/wiki.png)](http://wbnc.tk)
 
 [![Upstream](https://github.com/znc/znc)
 [![Travis Build Status](https://img.shields.io/travis/znc/znc/master.svg?label=linux%2Fosx)](https://travis-ci.org/znc/znc)
@@ -8,8 +8,8 @@
 [![Coverity Scan Build Status](https://img.shields.io/coverity/scan/6778.svg)](https://scan.coverity.com/projects/znc-coverity)
 
 
-[![WBNC](https://github.com/wbnc/znc)
-[![WBNC Travis Status](https://img.shields.io/travis/WBNC/znc/master.svg)](https://travis-ci.org/WBNC/znc)
+[![WBNC](https://github.com/DreamBNC/znc)
+[![WBNC Travis Status](https://img.shields.io/travis/DreamBNC/znc/master.svg)](https://travis-ci.org/WBNC/znc)
 [![WBNC Coverity Scan](https://img.shields.io/coverity/scan/9076.svg)](https://scan.coverity.com/projects/wbnc-znc)
 
 
@@ -18,12 +18,12 @@ For people wondering, we're not gonna make Windows versions. Sorry about your lu
 
 - Minimal Requirements
 - Optional Requirements
-- Installing WZNC
+- Installing DreamZNC
 - Setting up znc.conf
 - Special config options
-- Using WZNC
+- Using DreamZNC
 - File Locations
-- WZNC's config file
+- DreamZNC's config file
 - Writing own modules
 - Further infos
 
@@ -61,7 +61,7 @@ cyrusauth:
 Character Encodings:
 * To get proper character encoding and charsets install ICU (`libicu4-dev`)
 
-## Installing WZNC
+## Installing DreamZNC
 
 Currently there are 2 build systems in place: CMake and `./configure`.
 `./configure` will eventually be removed.
@@ -111,7 +111,7 @@ If you are using SSL you should do `znc --makepem`
 
 ## Special config options
 
-When you create your WZNC configuration file via --makeconf, you are asked
+When you create your DreamZNC configuration file via --makeconf, you are asked
 two questions which might not be easy to understand.
 
 > Number of lines to buffer per channel
@@ -128,10 +128,10 @@ If this is disabled, you get the buffer playback only once and then it is
 deleted. If this is enabled, the buffer is not deleted. This may be useful
 if you regularly use more than one client to connect to ZNC.
 
-## Using WZNC
+## Using DreamZNC
 
-Once you have started ZNC you can connect with your favorite IRC-client to
-ZNC. You should use `username:password` as the server password (e.g.
+Once you have started DreamZNC you can connect with your favorite IRC-client to
+it. You should use `username:password` as the server password (e.g.
 `/pass user:pass`).
 
 Once you are connected you can do `/msg *status help` for some commands.
@@ -140,7 +140,7 @@ provide `/msg *modulename help`
 
 ## File Locations
 
-In its data dir (`~/.znc` is default) ZNC saves most of its data. The only
+In its data dir (`~/.znc` is default) DreamZNC saves most of its data. The only
 exception are modules and module data, which are saved in
 `<prefix>/lib/znc` and `<prefix>/share/znc`, and the znc binary itself.
 More modules (e.g. if you install some later) can be saved in
@@ -161,12 +161,12 @@ These directories are also in there:
 - users   - This is per-user data and mainly contains just a moddata
   directory.
 
-## WZNC's config file
+## DreamZNC's config file
 
 This file shouldn't be too hard too understand. An explanation of all the
-items can be found on the
+items can be found on the upstream wiki's
 [Configuration](http://wiki.znc.in/Configuration)-Page.
-**Warning: better not to edit config, while ZNC is running.** Use  the
+**Warning: better not to edit config, while DreamZNC is running.** Use  the
 [webadmin] and [controlpanel] modules instead.
 
 [webadmin]:http://wiki.znc.in/Webadmin
@@ -195,9 +195,9 @@ Python modules are loaded through the global module
 
 ## Further Information
 
-Please visit http://wbnc.tk/ or any one of out official channels below:
+Please visit http://dreambnc.xyz/ or any one of out official channels below:
 
-  [#WBNC@irc.rizon.net]
+  [#DreamBNC@irc.rizon.net]
   [#WBNC@irc.xerox.us.to]
   [#WBNC@irc.freenode.org]
   [#WBNC@irc.mindforge.org]
@@ -205,4 +205,4 @@ Please visit http://wbnc.tk/ or any one of out official channels below:
 
 
 You can get the latest development version with git:
-`git clone https://github.com/wbnc/znc.git --recursive`
+`git clone https://github.com/DreamBNC/znc --recursive`
