@@ -28,14 +28,14 @@ class CNickServ : public CModule {
   public:
     void SetCommand(const CString& sLine) {
         SetNV("Password", sLine.Token(1, true));
-        PutModule("Password set");
+        PutModule("Successfully set NickServ password");
     }
 
     void ClearCommand(const CString& sLine) { DelNV("Password"); }
 
     void SetNSNameCommand(const CString& sLine) {
         SetNV("NickServName", sLine.Token(1, true));
-        PutModule("NickServ name set");
+        PutModule("Successfully set NickServ nickname");
     }
 
     void ClearNSNameCommand(const CString& sLine) { DelNV("NickServName"); }
@@ -50,7 +50,7 @@ class CNickServ : public CModule {
         if (sCmd.Equals("IDENTIFY")) {
             SetNV("IdentifyCmd", sNewCmd);
         } else {
-            PutModule("No such editable command. See ViewCommands for list.");
+            PutModule("Error: No such command. See ViewCommands for valid commands.");
             return;
         }
         PutModule("Ok");
@@ -63,15 +63,15 @@ class CNickServ : public CModule {
                    "password");
         AddCommand("Clear", static_cast<CModCommand::ModCmdFunc>(
                                 &CNickServ::ClearCommand),
-                   "", "Clear your nickserv password");
+                   "", "Reset the password to a blank state");
         AddCommand("SetNSName", static_cast<CModCommand::ModCmdFunc>(
                                     &CNickServ::SetNSNameCommand),
                    "nickname",
-                   "Set NickServ name (Useful on networks like EpiKnet, where "
-                   "NickServ is named Themis)");
+                   "Set NickServ nickname (may be useful for "
+                   "other networks where NickServ isn't NickServ)");
         AddCommand("ClearNSName", static_cast<CModCommand::ModCmdFunc>(
                                       &CNickServ::ClearNSNameCommand),
-                   "", "Reset NickServ name to default (NickServ)");
+                   "", "Reset NickServ nickname to default; the default is NickServ");
         AddCommand("ViewCommands", static_cast<CModCommand::ModCmdFunc>(
                                        &CNickServ::ViewCommandsCommand),
                    "",
@@ -139,7 +139,7 @@ template <>
 void TModInfo<CNickServ>(CModInfo& Info) {
     Info.SetWikiPage("nickserv");
     Info.SetHasArgs(true);
-    Info.SetArgsHelpText("Please enter your nickserv password.");
+    Info.SetArgsHelpText("Please enter your NickServ password.");
 }
 
-NETWORKMODULEDEFS(CNickServ, "Auths you with NickServ")
+NETWORKMODULEDEFS(CNickServ, "Authenticates you with NickServ")

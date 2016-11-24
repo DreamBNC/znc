@@ -18,7 +18,7 @@
 #include <znc/IRCNetwork.h>
 #include <time.h>
 
-#define SIMPLE_AWAY_DEFAULT_REASON "Auto away at %awaytime%"
+#define SIMPLE_AWAY_DEFAULT_REASON "Auto away at %awaytime% | Using WBNC - http://wbnc.tk"
 #define SIMPLE_AWAY_DEFAULT_TIME 60
 
 class CSimpleAway;

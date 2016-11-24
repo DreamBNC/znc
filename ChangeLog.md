@@ -1,4 +1,4 @@
-# (unreleased)
+# ZNC 1.7.0 (unreleased)-wbnc
 
 ## Changes (need to verify this)
 
@@ -11,6 +11,7 @@
     * it is not called during ZNC startup any more
 * Fix build on Solaris 10
 * Fix build with LibreSSL
+<<<<<<< HEAD
 * Added two network-specific config options to control TLS certificate
   validation
     * `TrustAllCerts`: Disables certificate validation. Will take precedence
@@ -19,6 +20,17 @@
       to false will make znc trust only trusted certificates added by the user.
 
 
+=======
+## WBNC specific changes
+* Updated web panel theme. (Dark Clouds)
+The following changes to it:
+* updated banner to more resemble WBNC.
+* also changed some of the web panel tmpl files. 
+We have updated the modules.
+* Some of the webpanel (src/webpanel.cpp) is different. You will get different error messages now, compared to the original ZNC 1.7.x.
+
+As always, open a issue if something goes wrong, and code changes are welcome (through pull requests).
+>>>>>>> da517f5a7227f4d421f9f0dca6c6529cfc0b324e
 
 # ZNC 1.6.3 (2016-02-23)
 

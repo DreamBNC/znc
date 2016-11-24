@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2004-2016 ZNC, see the NOTICE file for details.
+ * Copyriht (C) 2016 WBNC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -135,13 +136,13 @@ static void GenerateHelp(const char* appname) {
         "\t-h, --help         List available command line options (this page)");
     CUtils::PrintMessage(
         "\t-v, --version      Output version information and exit");
-    CUtils::PrintMessage("\t-f, --foreground   Don't fork into the background");
+    CUtils::PrintMessage("\t-f, --foreground   Make ZNC foreground. Best used with screen/tmux.");
     CUtils::PrintMessage(
         "\t-D, --debug        Output debugging information (Implies -f)");
     CUtils::PrintMessage(
         "\t-n, --no-color     Don't use escape sequences in the output");
     CUtils::PrintMessage(
-        "\t-r, --allow-root   Don't complain if ZNC is run as root");
+        "\t-r, --allow-root   Don't complain if WZNC is run as root");
     CUtils::PrintMessage(
         "\t-c, --makeconf     Interactively create a new config");
     CUtils::PrintMessage(
@@ -151,8 +152,7 @@ static void GenerateHelp(const char* appname) {
         "\t-p, --makepem      Generates a pemfile for use with SSL");
 #endif /* HAVE_LIBSSL */
     CUtils::PrintMessage(
-        "\t-d, --datadir      Set a different ZNC repository (default is "
-        "~/.znc)");
+        "\t-d, --datadir      Set a different WZNC config directory (default is ~/.znc.)");
 }
 
 class CSignalHandler {
@@ -330,7 +330,7 @@ int main(int argc, char** argv) {
                 bMakePem = true;
                 break;
 #else
-                CUtils::PrintError("ZNC is compiled without SSL support.");
+                CUtils::PrintError("WZNC is compiled without SSL support.");
                 return 1;
 #endif /* HAVE_LIBSSL */
             case 'd':
@@ -376,7 +376,7 @@ int main(int argc, char** argv) {
         CString sSalt;
         CUtils::PrintMessage("Type your new password.");
         CString sHash = CUtils::GetSaltedHashPass(sSalt);
-        CUtils::PrintMessage("Kill ZNC process, if it's running.");
+        CUtils::PrintMessage("Kill WZNC process, if it's running.");
         CUtils::PrintMessage(
             "Then replace password in the <User> section of your config with "
             "this:");
@@ -388,7 +388,7 @@ int main(int argc, char** argv) {
         std::cout << "\tSalt = " << sSalt << std::endl;
         std::cout << "</Pass>" << std::endl;
         CUtils::PrintMessage(
-            "After that start ZNC again, and you should be able to login with "
+            "After that start WZNC again, and you should be able to login with "
             "the new password.");
 
         CZNC::DestroyInstance();

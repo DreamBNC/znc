@@ -41,4 +41,4 @@ test -f config.guess -a -f config.sub -a -f install-sh ||
 echo "(Yes, automake is supposed to fail, ignore that)"
 echo
 
-echo "You may now run ./configure."
+echo "You may now run ./configure. Enjoy running your bouncer... we'll get to that soon."
